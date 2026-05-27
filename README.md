@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Task Manager
 
-## Getting Started
+A full-stack, production-ready Project & Task Management application built with Next.js (App Router), MongoDB, and Tailwind CSS. Designed to provide teams with a seamless experience for managing projects, assigning tasks, and tracking progress.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Robust Authentication**: Secure JWT-based authentication with HTTP-only cookies and route-protection middleware.
+- **Role-Based Access Control**: Differentiated `admin` and `member` roles. Admins have global privileges (creating projects, managing global users), while members interact within assigned projects.
+- **Project Management**: Create, edit, and manage projects. View real-time progress rings tracking task completion.
+- **Task Management**: Create tasks, assign them to team members, set due dates, and update statuses (To Do, In Progress, Done).
+- **Admin Dashboard**: A global directory where administrators can create, edit, and delete users from the system.
+- **Responsive UI/UX**: Beautifully designed interface built with Tailwind CSS and Radix UI (shadcn), ensuring a premium experience on desktop and mobile.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Frontend**: Next.js 16+ (App Router), React 19, Tailwind CSS
+- **Backend**: Next.js Route Handlers (Serverless APIs)
+- **Database**: MongoDB (Mongoose)
+- **Authentication**: JWT (jose for Edge compatibility), bcryptjs for password hashing
+- **UI Components**: shadcn/ui, Lucide Icons
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Local Development Setup
 
-## Learn More
+1. **Clone the repository:**
+   ```bash
+   git clone <your-github-repo-url>
+   cd <repository-name>
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Set up Environment Variables:**
+   Create a `.env.local` file in the root directory and add the following:
+   ```env
+   MONGODB_URI=your_mongodb_connection_string
+   JWT_SECRET=a_super_secure_random_string
+   JWT_EXPIRES_IN=7d
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser. The first user to register will automatically be assigned the `admin` role!
 
-## Deploy on Vercel
+## 🌐 Deployment (Railway)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This application is optimized for deployment on [Railway](https://railway.app/). 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Connect your GitHub repository to Railway.
+2. In your Railway project, navigate to the **Variables** tab.
+3. Add `MONGODB_URI` and a secure `JWT_SECRET`.
+4. Railway will automatically detect the Next.js build script and deploy your application!

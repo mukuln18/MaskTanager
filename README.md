@@ -9,8 +9,7 @@ This platform enables teams to collaboratively manage projects, assign tasks, mo
 # 🌐 Live Demo
 
 ### 🔗 Live Application
-masktanager-production.up.railway.app
-
+https://masktanager-production.up.railway.app
 ### 💻 GitHub Repository
 https://github.com/mukuln18/MaskTanager.git
 ---

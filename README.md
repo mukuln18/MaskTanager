@@ -1,56 +1,220 @@
-# Task Manager
+# 🚀 Team Task Manager
 
-A full-stack, production-ready Project & Task Management application built with Next.js (App Router), MongoDB, and Tailwind CSS. Designed to provide teams with a seamless experience for managing projects, assigning tasks, and tracking progress.
+A modern full-stack Team Task Management application built with **Next.js**, **MongoDB Atlas**, and **Tailwind CSS**.
 
-## 🚀 Features
+This platform enables teams to collaboratively manage projects, assign tasks, monitor progress, and streamline workflow with secure role-based access control.
 
-- **Robust Authentication**: Secure JWT-based authentication with HTTP-only cookies and route-protection middleware.
-- **Role-Based Access Control**: Differentiated `admin` and `member` roles. Admins have global privileges (creating projects, managing global users), while members interact within assigned projects.
-- **Project Management**: Create, edit, and manage projects. View real-time progress rings tracking task completion.
-- **Task Management**: Create tasks, assign them to team members, set due dates, and update statuses (To Do, In Progress, Done).
-- **Admin Dashboard**: A global directory where administrators can create, edit, and delete users from the system.
-- **Responsive UI/UX**: Beautifully designed interface built with Tailwind CSS and Radix UI (shadcn), ensuring a premium experience on desktop and mobile.
+---
 
-## 🛠 Tech Stack
+# 🌐 Live Demo
 
-- **Frontend**: Next.js 16+ (App Router), React 19, Tailwind CSS
-- **Backend**: Next.js Route Handlers (Serverless APIs)
-- **Database**: MongoDB (Mongoose)
-- **Authentication**: JWT (jose for Edge compatibility), bcryptjs for password hashing
-- **UI Components**: shadcn/ui, Lucide Icons
+### 🔗 Live Application
+masktanager-production.up.railway.app
 
-## ⚙️ Local Development Setup
+### 💻 GitHub Repository
+https://github.com/mukuln18/MaskTanager.git
+---
 
-1. **Clone the repository:**
-   ```bash
-   git clone <your-github-repo-url>
-   cd <repository-name>
-   ```
+# ✨ Features
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+## 🔐 Authentication & Authorization
+- Secure Signup/Login system
+- JWT Authentication using HTTP-only cookies
+- Password hashing with bcrypt
+- Protected routes & middleware
+- Role-based access control (Admin / Member)
 
-3. **Set up Environment Variables:**
-   Create a `.env.local` file in the root directory and add the following:
-   ```env
-   MONGODB_URI=your_mongodb_connection_string
-   JWT_SECRET=a_super_secure_random_string
-   JWT_EXPIRES_IN=7d
-   ```
+---
 
-4. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
-   Open [http://localhost:3000](http://localhost:3000) in your browser. The first user to register will automatically be assigned the `admin` role!
+## 📁 Project Management
+- Create and manage projects
+- Add/remove project members
+- Track project progress
+- Project-based task organization
 
-## 🌐 Deployment (Railway)
+---
 
-This application is optimized for deployment on [Railway](https://railway.app/). 
+## ✅ Task Management
+- Create tasks with due dates
+- Assign tasks to team members
+- Update task status:
+  - Todo
+  - In Progress
+  - Done
+- Overdue task detection
+- Task filtering & organization
 
-1. Connect your GitHub repository to Railway.
-2. In your Railway project, navigate to the **Variables** tab.
-3. Add `MONGODB_URI` and a secure `JWT_SECRET`.
-4. Railway will automatically detect the Next.js build script and deploy your application!
+---
+
+## 📊 Dashboard & Analytics
+- Total tasks overview
+- Completed task tracking
+- Overdue task monitoring
+- Recent activity section
+- Progress indicators
+
+---
+
+## 🎨 UI/UX
+- Modern SaaS-inspired interface
+- Fully responsive design
+- Clean dashboard layout
+- Loading states & empty states
+- Reusable UI components
+- Built with shadcn/ui + Tailwind CSS
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+- Next.js 16+ (App Router)
+- React 19
+- Tailwind CSS
+- shadcn/ui
+- Lucide Icons
+
+## Backend
+- Next.js Route Handlers
+- REST APIs
+- JWT Authentication
+
+## Database
+- MongoDB Atlas
+- Mongoose ODM
+
+## Security
+- bcryptjs
+- jose (Edge-compatible JWT)
+
+---
+
+# 📂 Project Structure
+
+```bash
+app/
+components/
+contexts/
+lib/
+models/
+middleware/
+public/
+```
+
+---
+
+# ⚙️ Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+MONGODB_URI=ADD_YOUR_MONGODB_CONNECTION_STRING
+JWT_SECRET=ADD_YOUR_SECRET_KEY
+JWT_EXPIRES_IN=7d
+```
+
+---
+
+# 🚀 Local Development Setup
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone ADD_YOUR_GITHUB_REPO_LINK
+cd ADD_YOUR_PROJECT_FOLDER_NAME
+```
+
+---
+
+## 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+## 3️⃣ Run Development Server
+
+```bash
+npm run dev
+```
+
+Application runs on:
+
+```bash
+http://localhost:3000
+```
+
+---
+
+# 👤 Default Admin Logic
+
+The **first registered user** automatically becomes:
+
+```bash
+Admin
+```
+
+Admins can:
+- Create/Delete projects
+- Manage users
+- Assign project members
+- Control project access
+
+---
+
+# 🌐 Deployment (Railway)
+
+This project is optimized for Railway deployment.
+
+## Steps
+
+### 1️⃣ Push project to GitHub
+
+### 2️⃣ Connect repository to Railway
+
+### 3️⃣ Add Environment Variables in Railway
+
+```env
+MONGODB_URI=ADD_MONGODB_URI
+JWT_SECRET=ADD_SECRET
+```
+
+### 4️⃣ Deploy Application
+
+Railway automatically detects Next.js and deploys the app.
+
+---
+
+# 🧪 Production Readiness
+
+✅ Responsive UI  
+✅ Secure Authentication  
+✅ Protected APIs  
+✅ Role-Based Access Control  
+✅ Error Handling  
+✅ Loading & Empty States  
+✅ Clean Scalable Architecture  
+✅ Production Build Verified  
+
+---
+
+# 📌 Future Improvements
+
+- Drag & Drop Kanban Board
+- Real-time Notifications
+- Team Chat
+- Activity Timeline
+- Email Invitations
+- Dark Mode
+
+---
+
+# 👨‍💻 Author
+
+### Name
+Mukul
+
+### Role
+Full-Stack Developer
